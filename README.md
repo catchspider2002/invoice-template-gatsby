@@ -1,7 +1,5 @@
 # Gatsby Starter Tailwind
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
-
 <div align="center">
   <img src="https://image.ibb.co/cJjPN7/gatsby_tailwind.png" alt="Gatsby and Tailwind CSS logos">
 </div>
@@ -16,7 +14,7 @@
   
 ![alt text](https://image.ibb.co/jv6FC7/gatsby_starter_tailwind.png "Screenshot of Gatsby Starter Tailwind homepage")
   
-<p align="center">View demo <a href="https://gatsby-starter-tailwind.oddstronaut.com/">here</a>.</p>
+<p align="center">View demo <a href="https://invoice-template-gatsby.netlify.com/">here</a>.</p>
 
 ## What is Tailwind CSS?
 
@@ -26,27 +24,6 @@
 ## What is Gatsby?
 
 > "Gatsby is a free and open source framework based on React that helps developers build blazing fast websites and apps." -[Gatsby](https://www.gatsbyjs.org/)
-
-## Get started
-
-Install the Gatsby CLI:
-
-```sh
-npm i --global gatsby-cli
-```
-
-Create a new Gatsby project using this starter:
-
-```sh
-gatsby new my-new-website https://github.com/taylorbryant/gatsby-starter-tailwind
-```
-
-Build a stylesheet from your Tailwind CSS config and run the project in development mode:
-
-```sh
-cd my-new-website
-npm run develop
-```
 
 ## Format and lint
 
@@ -68,13 +45,6 @@ Use `npm run build` to build your site for production.
 #### 2. Update the build settings
 
 ![alt text](https://i.ibb.co/whvDmxY/Screenshot-2020-01-26-11-06-15.png "Example Netlify build settings")
-
-## Resources
-
-- [Gatsby documentation](https://www.gatsbyjs.org/docs/)
-- [Tailwind documentation](https://tailwindcss.com/docs/what-is-tailwind/)
-- [Prettier documentation](https://prettier.io/docs/en/index.html)
-- [ESLint documentation](https://eslint.org/docs/user-guide/configuring)
 
 ## License
 

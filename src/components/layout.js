@@ -20,7 +20,7 @@ function Layout({ children }) {
           </p>
 
           <p>
-            <a className="font-bold no-underline text-white" href="https://github.com/taylorbryant/gatsby-starter-tailwind">
+            <a className="font-bold no-underline text-white" href="https://github.com/catchspider2002/invoice-template-gatsby">
               GitHub
             </a>
           </p>

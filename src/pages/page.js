@@ -236,11 +236,45 @@ function ContactPage() {
     <Layout>
       <SEO keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]} title="Contact" />
       <section>
-        <div className="container p-0 m-0 list-none flex bg-blue-500 justify-around flex-row flex-wrap">
+        <div className="container p-0 m-0 list-none flex bg-gray-700 justify-around flex-row flex-wrap">
           <div className="left item p-5 h-full mt-5 font-bold text-center">
-            <button id="downloadButton">Download</button>
+            <button id="downloadButton" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+              Download
+            </button>
             <button id="layout1">Layout 1</button>
+            
             <button id="layout2">Layout 2</button>
+            <form className="mx-auto md:w-1/2">
+              <p className="mb-8 leading-loose">
+                Here is an example of a form built using the official Tailwind CSS Custom Forms plugin.{` `}
+                <a className="font-bold text-gray-700 no-underline" href="https://github.com/tailwindcss/custom-forms">
+                  Read the docs
+                </a>
+                .
+              </p>
+
+              <label className="block mb-2 text-xs font-bold uppercase" htmlFor="first-name">
+                First Name
+              </label>
+
+              <input className="w-full mb-6 form-input" id="first-name" placeholder="Bill" type="text" />
+
+              <label className="block mb-2 text-xs font-bold uppercase" htmlFor="last-name">
+                Last Name
+              </label>
+
+              <input className="w-full mb-6 form-input" id="last-name" placeholder="Murray" type="text" />
+
+              <label className="block mb-2 text-xs font-bold uppercase" htmlFor="message">
+                Message
+              </label>
+
+              <textarea className="w-full mb-6 form-textarea" id="message" placeholder="Say something..." rows="8" />
+
+              <button className="px-4 py-2 text-sm font-bold text-white bg-gray-700 border-b-4 border-gray-800 rounded hover:border-gray-700 hover:bg-gray-600">
+                Submit
+              </button>
+            </form>
           </div>
 
           <div className="right item p-5 h-64 mt-5 font-bold text-center">

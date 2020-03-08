@@ -1,13 +1,6 @@
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
-
-// let leftMargin = (100 * 50) / a4Paper.width;
-// let fullLength = 100 - leftMargin * 2; // 83.2
-// let firstHalf = fullLength / 2; // 41.6
-// let firstQtr = firstHalf / 2 + leftMargin; // 20.8
-// let secondQtr = firstHalf / 2 + leftMargin; // 20.8
-// let thirdQtr = (fullLength * 3) / 4 + leftMargin; // 20.8
-// let fourthQtr = (fullLength * 3) / 4 + leftMargin; // 20.8
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 // Invoice - 17.72px
 // 8.86px
@@ -185,6 +178,10 @@ const number0 = (i, node) => {
   return 0;
 };
 
+const number8 = (i, node) => {
+  return 8;
+};
+
 const dashLine = (i, node) => {
   return { dash: { length: 4, space: 4 } };
 };
@@ -237,18 +234,14 @@ let layout1 = val => {
       hLineWidth: bottomBorderThin,
       vLineWidth: number0,
       hLineColor: val.colorPrimary,
-      paddingTop: function(i, node) {
-        return 8;
-      },
+      paddingTop: number8,
       paddingRight: paddingRightEdge
     },
     itemLayout2: {
       fillColor: function(i, node, columnIndex) {
         return (i % 2 === 0) & (i !== node.table.headerRows - 1) ? val.colorLightGray : null;
       },
-      hLineWidth: function(i, node) {
-        return i === 0 ? 0 : i === 1 ? 2 : 0.5;
-      },
+      hLineWidth: bottomBorderThickThin,
       vLineWidth: number0,
       hLineColor: val.colorPrimary,
       hLineStyle: function(i, node) {
@@ -265,18 +258,10 @@ let layout1 = val => {
       hLineWidth: bottomBorderThin,
       vLineWidth: number0,
       hLineColor: val.colorPrimary,
-      hLineStyle: function(i, node) {
-        return { dash: { length: 1, space: 4 } };
-      },
-      paddingTop: function(i, node) {
-        return 8;
-      },
-      paddingLeft: function(i, node) {
-        return i === 0 ? 5 : 10;
-      },
-      paddingRight: function(i, node) {
-        return i === node.table.widths.length - 1 ? 5 : 10;
-      }
+      hLineStyle: dottedLine,
+      paddingTop: number8,
+      paddingLeft: paddingLeft,
+      paddingRight: paddingRight
     }
   };
 
@@ -535,4 +520,5 @@ let layout2 = val => {
   };
 };
 
+// module.exports = { lightenDarkenColor, layout1, layout2 };
 export default { lightenDarkenColor, layout1, layout2 };
