@@ -3,3 +3,27 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* background-color: darkblue; */
+
+  -webkit-flex-flow: row wrap;
+}
+
+.item {
+  height: 100em;
+  margin-top: 10px;
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 71%;
+}

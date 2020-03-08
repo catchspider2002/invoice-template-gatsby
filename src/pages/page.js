@@ -5,11 +5,16 @@ import SEO from "../components/seo";
 import moment from "moment";
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
-import PDFJS from "pdfjs";
+// import PDFJS from "pdfjs-dist";
 import lib from "../components/functions";
+
+import PDFJS from "pdfjs-dist/build/pdf";
+import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
 function ContactPage() {
   pdfMake.vfs = pdfFonts.pdfMake.vfs;
+  PDFJS.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+
   let a4Paper = { width: 595.28, height: 841.89 };
   // let letterPaper = { width: 612, height: 792 };
   let paperSize = a4Paper;
@@ -193,6 +198,7 @@ function ContactPage() {
     options = options || { scale: 0.95 };
 
     function renderPage(page) {
+      console.log("During renderPages");
       var viewport = page.getViewport(options.scale);
       var wrapper = document.createElement("div");
       wrapper.className = "canvas-wrapper";
@@ -219,8 +225,10 @@ function ContactPage() {
       }
     }
     if (PDFJS.getDocument) {
+      console.log("Before renderPages");
       PDFJS.disableWorker = true;
       PDFJS.getDocument(url).then(renderPages);
+      console.log("After renderPages");
     }
   }
 
@@ -239,8 +247,6 @@ function ContactPage() {
             <div id="canvas" />
           </div>
         </div>
-
-        <div className="vertical-line absolute bg-black w-2 left-auto h-64"></div>
       </section>
     </Layout>
   );

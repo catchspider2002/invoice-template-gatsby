@@ -52,6 +52,7 @@
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-react": "7.18.3",
     "gatsby-plugin-eslint": "2.0.8",
+    "pdfjs-dist": "^2.2.228",
     "prettier": "1.19.1",
     "tailwindcss": "1.2.0"
   },
