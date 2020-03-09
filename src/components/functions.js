@@ -1,6 +1,6 @@
-import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
+// import pdfMake from "pdfmake/build/pdfmake";
+// import pdfFonts from "pdfmake/build/vfs_fonts";
+// pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 // Invoice - 17.72px
 // 8.86px
@@ -511,5 +511,5 @@ let layout2 = val => {
   };
 };
 
-// module.exports = { lightenDarkenColor, layout1, layout2 };
-export default { lightenDarkenColor, layout1, layout2 };
+module.exports = { lightenDarkenColor, layout1, layout2 };
+// export default { lightenDarkenColor, layout1, layout2 };
