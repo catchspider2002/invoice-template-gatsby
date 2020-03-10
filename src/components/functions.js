@@ -1,6 +1,43 @@
-// import pdfMake from "pdfmake/build/pdfmake";
+import pdfMake from "pdfmake/build/pdfmake";
 // import pdfFonts from "pdfmake/build/vfs_fonts";
+import pdfFonts from "../vfs_fonts";
+
+// pdfMake.addVirtualFileSystem(pdfFonts.vfs)
+// console.log("pdfFonts: "+pdfFonts)
+// console.log("pdfFonts.vfs: "+pdfFonts.vfs)
+// if(pdfFonts.vfs){
+//   console.log("Loaded")
+// pdfMake.vfs = pdfFonts.vfs || pdfFonts.pdfMake.vfs;
 // pdfMake.vfs = pdfFonts.pdfMake.vfs;
+pdfMake.vfs = pdfFonts.vfs;
+
+pdfMake.fonts = {
+  PTSans: {
+          normal: 'PTSans-Regular.ttf',
+          bold: 'PTSans-Bold.ttf',
+          italics: 'PTSans-Regular.ttf',
+          bolditalics: 'PTSans-Regular.ttf'
+  },
+  SourceSans: {
+          normal: 'SourceSansPro-Regular.ttf',
+          bold: 'SourceSansPro-Bold.ttf',
+          italics: 'SourceSansPro-Regular.ttf',
+          bolditalics: 'SourceSansPro-Regular.ttf'
+  },
+  VarelaRound: {
+          normal: 'VarelaRound-Regular.ttf',
+          bold: 'VarelaRound-Regular.ttf',
+          italics: 'VarelaRound-Regular.ttf',
+          bolditalics: 'VarelaRound-Regular.ttf'
+  },
+  Roboto: {
+          normal: 'Roboto-Regular.ttf',
+          bold: 'Roboto-Medium.ttf',
+          italics: 'Roboto-Regular.ttf',
+          bolditalics: 'Roboto-Regular.ttf'
+  }
+};
+
 
 // Invoice - 17.72px
 // 8.86px
@@ -478,7 +515,10 @@ let layout1 = val => {
         }
       }
     ],
-    styles: styles()
+    styles: styles(),
+    defaultStyle: {
+      font: 'PTSans'
+    }
   };
 };
 
@@ -511,5 +551,5 @@ let layout2 = val => {
   };
 };
 
-module.exports = { lightenDarkenColor, layout1, layout2 };
-// export default { lightenDarkenColor, layout1, layout2 };
+// module.exports = { lightenDarkenColor, layout1, layout2 };
+export default { lightenDarkenColor, layout1, layout2 };

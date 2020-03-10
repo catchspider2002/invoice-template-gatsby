@@ -4,15 +4,45 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import moment from "moment";
 import pdfMake from "pdfmake/build/pdfmake";
-import pdfFonts from "pdfmake/build/vfs_fonts";
+// import pdfFonts from "pdfmake/build/vfs_fonts";
+import pdfFonts from "../vfs_fonts";
 // import PDFJS from "pdfjs-dist";
-import lib from "../components/functions";
+  import lib from "../components/functions"; 
 
 import PDFJS from "pdfjs-dist/build/pdf";
 import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
 
 function ContactPage() {
-  pdfMake.vfs = pdfFonts.pdfMake.vfs;
+  // pdfMake.vfs = pdfFonts.pdfMake.vfs;
+  pdfMake.vfs = pdfFonts.vfs;
+
+pdfMake.fonts = {
+  PTSans: {
+          normal: 'PTSans-Regular.ttf',
+          bold: 'PTSans-Bold.ttf',
+          italics: 'PTSans-Regular.ttf',
+          bolditalics: 'PTSans-Regular.ttf'
+  },
+  SourceSans: {
+          normal: 'SourceSansPro-Regular.ttf',
+          bold: 'SourceSansPro-Bold.ttf',
+          italics: 'SourceSansPro-Regular.ttf',
+          bolditalics: 'SourceSansPro-Regular.ttf'
+  },
+  VarelaRound: {
+          normal: 'VarelaRound-Regular.ttf',
+          bold: 'VarelaRound-Regular.ttf',
+          italics: 'VarelaRound-Regular.ttf',
+          bolditalics: 'VarelaRound-Regular.ttf'
+  },
+  Roboto: {
+          normal: 'Roboto-Regular.ttf',
+          bold: 'Roboto-Medium.ttf',
+          italics: 'Roboto-Regular.ttf',
+          bolditalics: 'Roboto-Regular.ttf'
+  }
+};
+
   PDFJS.GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
   let a4Paper = { width: 595.28, height: 841.89 };
