@@ -1,6 +1,6 @@
 # Test header
 <h6>test</h6>
-<invoiceNum>test</invoiceNum>
+<h6><invoiceNum>test</invoiceNum></h6>
 
 ## Testing translation
 
