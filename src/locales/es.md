@@ -1,11 +1,11 @@
-# Cabecera de prueba
+# Test header
 
 <h6>test</h6>
 
-<zlabelinvoice><h1>Factura</h1></zlabelinvoice>
+<zLabelInvoice>
+# Invoice</zLabelInvoice> <zLabelInvoiceNum>
+### Invoice Number</zLabelInvoiceNum>
 
-<zlabelinvoicenum><h3>Invoice Number</h3></zlabelinvoicenum>
+## Testing translation
 
-## Probar traducción
-
-Se puede acceder al explorador de archivos usando el botón en la esquina izquierda de la barra de navegación. Puede crear un nuevo archivo haciendo clic en **Nuevo archivo** en el explorador de archivos. También puede crear carpetas haciendo clic en el botón **Nueva carpeta** .
+The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** in the file explorer. You can also create folders by clicking the **New folder** button.
