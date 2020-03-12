@@ -2,9 +2,9 @@
 
 <h6>test</h6>
 
-<zLabelInvoice><h1>Invoice</h1></zLabelInvoice>
-
-<zLabelInvoiceNum><h3>Invoice Number</h3></zLabelInvoiceNum>
+<zLabelInvoice>
+# Invoice</zLabelInvoice> <zLabelInvoiceNum>
+### Invoice Number</zLabelInvoiceNum>
 
 ## Testing translation
 
