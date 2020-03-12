@@ -1,6 +1,14 @@
 <h1>Global Settings</h1>
 
-<zLabelInvoice><h3>Label for Invoice<h3></zLabelInvoice>: <zLabelInvoiceValue><h3>INVOICE</h3></zLabelInvoiceValue>
+<zLabelInvoice><h3>Old Label for Invoice</h3></zLabelInvoice>
+<zLabelInvoiceValue><h3>OLD INVOICE</h3></zLabelInvoiceValue>
+
+<zLabelInvoice>Label for Invoice</zLabelInvoice>
+<zLabelInvoiceValue>INVOICE</zLabelInvoiceValue>
+
+
+<h3><zLabelInvoice>Outer Label for Invoice</zLabelInvoice></h3>
+<h3><zLabelInvoiceValue>OUTER INVOICE</zLabelInvoiceValue></h3>
 
 <zLabelInvoice>Invoice</zLabelInvoice> <zLabelInvoiceNum>Invoice Number</zLabelInvoiceNum>
 
