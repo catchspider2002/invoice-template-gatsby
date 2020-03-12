@@ -1,6 +1,12 @@
-# Test header
+<h1>Global Settings</h1>
 
-<h6>test</h6>
+<zLabelInvoice>
+### Old Label for Invoice</zLabelInvoice> <zLabelInvoiceValue>
+### OLD INVOICE</zLabelInvoiceValue>
+<zLabelInvoice>Label for Invoice</zLabelInvoice> <zLabelInvoiceValue>INVOICE</zLabelInvoiceValue>
+
+<h3><zLabelInvoice>Outer Label for Invoice</zLabelInvoice></h3>
+<h3><zLabelInvoiceValue>OUTER INVOICE</zLabelInvoiceValue></h3>
 
 <zLabelInvoice>Invoice</zLabelInvoice> <zLabelInvoiceNum>Invoice Number</zLabelInvoiceNum>
 
